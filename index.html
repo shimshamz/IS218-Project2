@@ -3,34 +3,41 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-		<title>Signup Form</title>
+		<title>To-Do List Application</title>
 	</head>
 	<body>
-
-		<h1>Todo Assignment</h1>
-		<div class="container">
-
-			<h2>Signup Form</h2>
-			<form action="todos_manager/index.php">
+	<h1 id="heading">Log In or Sign Up</h1>
+	<div class="container">
+		<section id="signup">
+			<h2>Create an Account</h2>
+			<form action="todos_manager/index.php" method="post">
 				<div class="form-group" style="float: left; width: 49%;">
 					<label for="fname">First Name:</label>
-					<input type="text" class="form-control" id="fname">
+					<input type="text" class="form-control" id="fname" autocomplete=off>
 				</div>
-				<div class="form-group" style="float: left; width: 49%; margin-left: 2%;">
+				<div class="form-group" style="float: right; width: 49%;">
 					<label for="lname">Last Name:</label>
-					<input type="text" class="form-control" id="lname">
+					<input type="text" class="form-control" id="lname" autocomplete=off>
 				</div>
 				<div class="form-group" style="clear: both;">
 					<label for="email">Email address:</label>
-					<input type="email" class="form-control" id="email">
+					<input type="email" class="form-control" id="email" autocomplete=off>
+				</div>
+				<div class="form-group">
+					<label for="phone">Password:</label>
+					<input type="text" class="form-control" id="password" autocomplete=off>
 				</div>
 				<div class="form-group">
 					<label for="phone">Phone Number:</label>
-					<input type="text" class="form-control" id="phone">
+					<input type="text" class="form-control" id="phone" autocomplete=off>
 				</div>
 				<div class="form-group">
 					<label for="bday">Birthday:</label>
-					<input type="text" class="form-control" id="bday" placeholder="MM / DD / YYYY">
+					<div id="bday">
+					<input type="text" class="form-control" id="year" placeholder="YYYY" autocomplete=off>
+					<input type="text" class="form-control" id="month" placeholder="MM" autocomplete=off>
+					<input type="text" class="form-control" id="day" placeholder="DD" autocomplete=off>
+					</div>
 				</div>
 				<div class="dropdown">
 					<label for="dropdown">Gender:</label>
@@ -40,11 +47,24 @@
 						<option>Female</option>
 					</select>
 				</div>
-				<button type="submit">
-					Submit
-				</button>
+        		<input type="submit" value="Sign Up" id="button"/>
 			</form>
-		</div>
+		</section>
 
+		<section id="login">
+			<h2>Log In</h2>
+			<form action="todos_manager/index.php" method="post">
+				<div class="form-group">
+					<label for="email">Email address:</label>
+					<input type="email" class="form-control" id="email" autocomplete=off>
+				</div>
+				<div class="form-group">
+					<label for="phone">Password:</label>
+					<input type="text" class="form-control" id="password" autocomplete=off>
+				</div>
+        		<input type="submit" value="Log In" id="button"/>
+			</form>
+		</section>
+	</div>
 	</body>
 </html>
