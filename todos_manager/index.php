@@ -1,7 +1,16 @@
 <?php
+session_set_cookie_params (0, "/~sm2292/IS218-Project2/", "web.njit.edu");
+session_start();
+
 require('../model/database.php');
 require('../model/accounts_db.php');
 require('../model/todos_db.php');
+include('myfunctions.php');
+
+gatekeeper();
+
+$email = $_SESSION["email"];
+$password = $_SESSION["password"]; 
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -10,8 +19,6 @@ if ($action == NULL) {
         $action = 'list_todos';
     }
 }
-$email = filter_input(INPUT_POST, 'email');
-$password = filter_input(INPUT_POST, 'password');
 
 if ($action == 'list_todos') {
     $ownerID = get_id($email, $password);
@@ -61,5 +68,4 @@ if ($action == 'list_todos') {
     complete_todo();
     header("Location: .?action=list_todos");
 } 
-
 ?>
