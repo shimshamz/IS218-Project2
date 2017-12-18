@@ -6,33 +6,34 @@ body {
 	background-color: #b9ff82;
 	font-family: 'Roboto', sans-serif;
 }
-h1 {
+
+/* Login.html */
+
+#heading {
 	background-color: #2f6800;
 	color: #ffffff;
-	margin: 0px;
-	padding: 10px 20px;
+	padding: 1% 3%;
 }
-.container {
-	background-color: #b1ff72;
-	width: 60%;
+div.container {
 	margin: auto;
-	padding: 15px;
-	border-radius: 4px;
+	padding: 1% 3%;
+	overflow: auto;
 }
 div.container h2 {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 10px;
-	padding: 10px 0px;;
+	margin-bottom: 2%;
+	padding: 0.5% 0%;;
 }
-label {
+section label {
 	display: block;
-	margin-bottom: 8px;
+	margin-bottom: 1%;
 }
 .form-group {
-	margin-bottom: 20px;
+	margin-bottom: 3%;
 }
 .form-control {
+	font-size: 100%;
 	font-family: 'Roboto', sans-serif;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -43,38 +44,70 @@ label {
 	border: 1px solid #8e8e8e;
 	border-radius: 4px;
 }
-#bday {
-	width: 15%;
-}
 .form-control:focus {
 	border-color: #000000;
 }
 .dropdown {
-	margin-bottom: 2px;
+	margin-bottom: 1%;
 }
 .dropdown-menu {
+	font-size: 100%;
 	font-family: 'Roboto', sans-serif;
 	font-size: 85%;
 	outline: none;
-	width: 100px;
+	width: 20%;
 	margin-bottom: 20px;
+	padding: 6px 8px;
 	border: 1px solid #8e8e8e;
 	border-radius: 4px;
 }
 .dropdown-menu:focus {
 	border-color: #000000;
 }
-button {
+#button {
 	font-family: 'Roboto', sans-serif;
 	font-size: 105%;
 	background-color: #ffffff;
 	color: #000000;
 	width: 100px;
+	margin-top: 1%;
 	padding: 6px 8px;
 	border: 1px solid #8e8e8e;
-	border-radius: 4px; 
+	border-radius: 4px;
+	cursor: pointer;
 }
-button:hover {
+#button:hover {
 	border-color: #000000;
 	font-weight: bold;
+}
+section {
+	background-color: #b1ff72;
+	box-sizing: border-box;
+	width: 49%;
+	padding: 1% 2% 2% 2%;
+	border-radius: 4%;
+}
+section#signup {
+	float: left;
+}
+section#login {
+	float: right;
+}
+div#bday {
+	overflow: auto;
+}
+div#bday input {
+	float: left;
+	margin-right: 0.5%;
+}
+div#bday #year {
+	width: 10%;
+}
+div#bday #month {
+	width: 8%;
+	text-align: center;
+}
+div#bday #day {
+	width:8%;
+	text-align: center;
 }
