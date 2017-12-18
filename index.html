@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+		<title>Signup Form</title>
+	</head>
+	<body>
+
+		<h1>Todo Assignment</h1>
+		<div class="container">
+
+			<h2>Signup Form</h2>
+			<form action="todos_manager/index.php">
+				<div class="form-group" style="float: left; width: 49%;">
+					<label for="fname">First Name:</label>
+					<input type="text" class="form-control" id="fname">
+				</div>
+				<div class="form-group" style="float: left; width: 49%; margin-left: 2%;">
+					<label for="lname">Last Name:</label>
+					<input type="text" class="form-control" id="lname">
+				</div>
+				<div class="form-group" style="clear: both;">
+					<label for="email">Email address:</label>
+					<input type="email" class="form-control" id="email">
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone Number:</label>
+					<input type="text" class="form-control" id="phone">
+				</div>
+				<div class="form-group">
+					<label for="bday">Birthday:</label>
+					<input type="text" class="form-control" id="bday" placeholder="MM / DD / YYYY">
+				</div>
+				<div class="dropdown">
+					<label for="dropdown">Gender:</label>
+					<select class="dropdown-menu" id="dropdown">
+						<option disabled selected>Choose one</option>
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+				</div>
+				<button type="submit">
+					Submit
+				</button>
+			</form>
+		</div>
+
+	</body>
+</html>
