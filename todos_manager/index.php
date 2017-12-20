@@ -47,6 +47,7 @@ if ($action == 'list_todos') {
 	$message = filter_input(INPUT_POST, 'todo_message');
 	include('todo_edit_form.php');       
 } else if ($action == 'save_todo') {
+    $id = filter_input(INPUT_POST, 'id');
 	$duedate = filter_input(INPUT_POST, 'duedate');
 	$message = filter_input(INPUT_POST, 'message');
     if ($duedate == NULL || $duedate == FALSE ||

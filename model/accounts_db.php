@@ -53,6 +53,8 @@ function add_account($email, $fname, $lname, $phone, $birthday, $gender, $passwo
     $statement->bindValue(":birthday", $birthday);
     $statement->bindValue(":gender", $gender);
     $statement->bindValue(":password", $password);
+    $statement->execute();
+    $statement->closeCursor();
 }
 
  ?>

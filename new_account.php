@@ -20,10 +20,23 @@ else {
 	$gender = "female";
 }
 
-add_account($email, $fname, $lname, $phone, $birthday, $gender, $password);
+if ($fname == NULL || $fname == FALSE ||
+	$lname == NULL || $lname == FALSE ||
+	$email == NULL || $email == FALSE ||
+	$password == NULL || $password == FALSE ||
+	$phone == NULL || $phone == FALSE ||
+	$birthday == NULL || $birthday == FALSE ||
+	$choice == NULL || $choice == FALSE) {
+        $error = "Invalid data. Check all fields and try again.";
+        include('errors/error.php');
+    } else { 
+        add_account($email, $fname, $lname, $phone, $birthday, $gender, $password);
+		$message = 'Account Created.<br>Transferring back to Login Page...';
+		$target = "index.html";
+		redirect ($message, $target, 3);
+    }
 
-$message = 'Account Created.<br>Transferring back to Login Page...';
-$target = "index.html";
-redirect ($message, $target, 3);
+
+
 
 ?>

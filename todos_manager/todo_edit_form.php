@@ -4,6 +4,7 @@
     <h2>Edit To-Do Item</h2>
     <form action="index.php" method="post" id="edit_form">
         <input type="hidden" name="action" value="save_todo">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
         <div class="form-group">
             <label>Due Date:</label>
             <input type="text" class="form-control" name="duedate" placeholder="<?php echo $duedate; ?>" autocomplete=off>
