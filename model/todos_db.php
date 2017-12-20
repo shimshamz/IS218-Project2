@@ -2,12 +2,12 @@
 function get_todos($ownerID) {
     global $db;
     $query = 'SELECT * FROM todos
-              WHERE ownerid = :ownerid'
-              ORDER BY 'createddate' DESC;
+              WHERE ownerid = :ownerid
+              ORDER BY createddate DESC';
     $statement = $db->prepare($query);
     $statement->bindValue(":ownerid", $ownerID);
     $statement->execute();
-    $todos = $statement->fetch();
+    $todos = $statement->fetchAll();
     $statement->closeCursor();
     return $todos;
 }
@@ -45,7 +45,7 @@ function new_todo($email, $ownerID, $duedate, $message) {
     $query = 'INSERT INTO todos (owneremail, ownerid, createddate, duedate, message, isdone)
     		  VALUES (:email, :ownerid, :createddate, :duedate, :message, :isdone)';
     $statement = $db->prepare($query);
-    $statement->bindValue(":email", $owneremail);
+    $statement->bindValue(":email", $email);
     $statement->bindValue(":ownerid", $ownerID);
     $statement->bindValue(":createddate", $datetime);
     $statement->bindValue(":duedate", $duedate);
@@ -55,7 +55,7 @@ function new_todo($email, $ownerID, $duedate, $message) {
     $statement->closeCursor();
 }
 
-function complete_todo() {
+function complete_todo($id) {
     global $db;
     $query = 'UPDATE todos
     		  SET isdone = :isdone
@@ -66,4 +66,16 @@ function complete_todo() {
     $statement->execute();
     $statement->closeCursor();
 }
- ?>
+
+function redo_todo($id) {
+    global $db;
+    $query = 'UPDATE todos
+              SET isdone = :isdone
+              WHERE id = :id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(":isdone", 0);
+    $statement->bindValue(":id", $id);
+    $statement->execute();
+    $statement->closeCursor();
+}
+?>

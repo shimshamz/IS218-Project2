@@ -28,7 +28,7 @@ function gatekeeper () {
 	if (!isset ($_SESSION["logged"])) {
 		$message = '<p>Please Log in.
 				<br>Redirecting to Login page...</p>';
-		$target = "login.html";
+		$target = "../index.html";
 		redirect ($message, $target, 3);
 	}
 }

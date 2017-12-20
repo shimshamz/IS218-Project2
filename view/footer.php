@@ -1,6 +1,7 @@
+</div>
 <footer>
     <p class="copyright">
-        &copy; <?php echo date("Y"); ?> My To-Do List.
+        &copy; <?php date_default_timezone_set("America/New_York"); echo date("Y"); ?> My To-Do List.
     </p>
 </footer>
 </body>
