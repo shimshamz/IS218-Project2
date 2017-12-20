@@ -11,5 +11,5 @@ $_SESSION = array();
 session_destroy();
 setcookie("PHPSESSID", "", time()-3600, '/~sm2292/IS218-Project2/', "", 0, 0);
 
-echo "Logged out.";
+echo "<p><b>Logged out.</b></p>";
 ?>
