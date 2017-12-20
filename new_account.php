@@ -31,12 +31,8 @@ if ($fname == NULL || $fname == FALSE ||
         include('errors/error.php');
     } else { 
         add_account($email, $fname, $lname, $phone, $birthday, $gender, $password);
-		$message = 'Account Created.<br>Transferring back to Login Page...';
+		$message = '<p>Account Created.<br>Transferring back to Login Page...</p>';
 		$target = "index.html";
 		redirect ($message, $target, 3);
     }
-
-
-
-
 ?>

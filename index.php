@@ -2,6 +2,7 @@
 session_set_cookie_params (0, "/~sm2292/IS218-Project2/");
 session_start();
 
+include('view/header.php');
 require('model/database.php');
 require('model/accounts_db.php');
 require('model/todos_db.php');

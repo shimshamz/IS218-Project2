@@ -7,11 +7,11 @@
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <div class="form-group">
             <label>Due Date:</label>
-            <input type="text" class="form-control" name="duedate" placeholder="<?php echo $duedate; ?>" autocomplete=off>
+            <input type="text" class="form-control" name="duedate" value="<?php echo $duedate; ?>" autocomplete=off>
         </div>
         <div class="form-group">
             <label>Message:</label>
-            <textarea form="edit_form" class="form-control" name="message" placeholder="<?php echo $message; ?>" autocomplete=off></textarea>
+            <textarea form="edit_form" class="form-control" name="message" autocomplete=off><?php echo $message; ?></textarea>
         </div>
         <input type="submit" value="Save" class="button">
         <a class="tb_button" href="?action=list_todos">Back</a>

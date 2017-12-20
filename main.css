@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+html {
+	min-height: 100vh;
+}
 body {
 	background-color: #b9ff82;
 	font-family: 'Roboto', sans-serif;
